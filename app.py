@@ -2,8 +2,11 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+st.title("Mi proyecto sprint 6!")
+
 car_data = pd.read_csv('./vehicles_us.csv')  # leer los datos
 
+st.header("Elige que casilla deseas construir:")
 
 build_bar_graph = st.checkbox('Construir un grafico de barras')
 build_histogram = st.checkbox('Construir un histograma')
@@ -45,6 +48,4 @@ if build_scatter:  # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig2, use_container_width=True)
 
-st.write(
-    # Echo por German Camacho Angulo
-)
+st.markdown("<p style='color:red'>Hecho por German Camacho Angulo</p>")
